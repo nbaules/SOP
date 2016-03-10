@@ -17,3 +17,19 @@ We are using [Xcode](https://developer.apple.com/xcode/), writing software in [S
 ## Code coverage
 We are using the built-in code coverage provided by [Xcode](https://developer.apple.com/xcode/).
 ![code_coverage](/images/code_coverage.png)
+
+### Branches
+As for the branching, we are using at least five branches:
+- [x] Master
+- [x] Major
+- [x] Major-team
+- [x] Minor
+- [x] Bugfix
+ 
+As clarified in [assignment 1-1.md](assignment 1-1):
+
+- The `bugfix` team merges `bugfixes` into a `minor` release. (orange)
+- The `testing` team merges `minor` into `major`. (green)
+- One of the `major` teams merges `major-team` into `major`. (blue)
+- The `testing` team then merges `major` into `master`. (green)
+![branches_sketch](/images/branches_sketch.png)
