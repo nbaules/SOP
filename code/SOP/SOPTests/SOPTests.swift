@@ -23,5 +23,6 @@ class SOPTests: XCTestCase {
     XCTAssertTrue(1 == 1)
     XCTAssertFalse(1 == 2)
     XCTAssertFalse(1 == 3)
+    XCTAssertTrue(2 == 2)
   }
 }
