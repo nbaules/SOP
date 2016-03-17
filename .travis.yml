@@ -10,4 +10,4 @@ osx_image: xcode-7.2
 xcode_sdk: iphonesimulator9.2
  
 script:
-- xcodebuild clean build test -project code/SOP/SOP.xcodeproj -scheme SOPTests
+- xcodebuild clean build test -project code/SOP/SOP.xcodeproj -scheme code/SOP/SOPTests
