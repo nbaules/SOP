@@ -4,9 +4,11 @@ branches:
  only:
  - master
  
- notifications:
-  email:
-    - bas@basbroek.nl
+notifications:
+ email:
+  - bas@basbroek.nl
+ on_success: always
+ on_failure: always
  
 xcode_project: SOP.xcodeproj
 xcode_scheme: SOPTests
