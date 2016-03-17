@@ -22,5 +22,6 @@ class SOPTests: XCTestCase {
   func testExample() {
     XCTAssertTrue(1 == 1)
     XCTAssertFalse(1 == 2)
+    XCTAssertFalse(1 == 3)
   }
 }
