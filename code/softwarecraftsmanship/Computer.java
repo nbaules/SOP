@@ -19,6 +19,16 @@ public class Computer {
         
         return price;
     }
+
+    public boolean hasCasing() {
+        return parts.map { $0.type }.contains("Casing");
+
+        for (Part part: parts) {
+
+        }
+
+        return false;
+    }
     
     public boolean isComplete() {
         boolean hasCasing = false;
