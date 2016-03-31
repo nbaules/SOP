@@ -50,11 +50,11 @@ public class Part {
         this.price = price;
     }
     
-    public String GetType() {
+    public String getType() {
         return type;
     }
     
-    public double GetPrice() {
+    public double getPrice() {
         return price;
     }
 }

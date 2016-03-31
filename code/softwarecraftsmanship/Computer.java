@@ -6,49 +6,49 @@ public class Computer {
     
     List<Part> parts = new ArrayList<>();
     
-    public int NumberOfParts() {
+    public int numberOfParts() {
         int count = 0;
-        for (Part p : parts) { 
+        for (Part part: parts) { 
             count++;
         }
         return count;
     }
     
-    public void AddPart(Part p) {
+    public void addPart(Part p) {
         parts.add(p);
     }
     
-    public double GetPrice() {
+    public double getPrice() {
         double price = 0.0;
         
-        for (int i = 0; i < NumberOfParts(); i++) {
+        for (int i = 0; i < numberOfParts(); i++) {
             Part part = parts.get(i);
-            price += part.GetPrice();
+            price += part.getPrice();
         }
         
         return price;
     }
     
-    public boolean IsComplete() {
+    public boolean isComplete() {
         boolean hasCasing = false;
         boolean hasProcessor = false;
         boolean hasMemory = false;
         boolean hasMotherboard = false;
         
-        for (Part part : parts) {
-            if (part.GetType().equals("Casing")) {
+        for (Part part: parts) {
+            if (part.getType().equals("Casing")) {
                 hasCasing = true;
             }
             else {
-                if (part.GetType().equals("Processor")) {
+                if (part.getType().equals("Processor")) {
                     hasProcessor = true;
                 }
                 else {
-                    if (part.GetType().equals("Memory")) {
+                    if (part.getType().equals("Memory")) {
                         hasMemory = true;
                     }
                     else {
-                        if (part.GetType().equals("Motherboard")) {
+                        if (part.getType().equals("Motherboard")) {
                             hasMotherboard = true;
                         }
                     }
