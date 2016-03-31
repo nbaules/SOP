@@ -32,14 +32,14 @@ if {
 
 ## Lijsten
 ### Grootste files
-[image](/images/biggest_files.png)
+![image](/images/biggest_files.png)
 
 ### Regels commentaar
-[image](/images/commented_lines.png)
+![image](/images/commented_lines.png)
 
 ### Files met meeste classes
 Zoals beschreven in de gemeten waarden, staat een elke file slechts één class.
 
 ### Hoogste cyclomatische complexiteit
 ￼
-[image](/images/cyclomatic_complexity.png)
+![image](/images/cyclomatic_complexity.png)
