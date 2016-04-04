@@ -27,11 +27,6 @@ public class Main {
                 StringWrapperFactory.createStringWrapperWithString("MSI H97 PC MATE - Socket 1150 - ATX"), 
                 DoubleWrapperFactory.createDoubleWrapperWithDouble(89.0)));
         
-        if (computer.isComplete().booleanValue()) {
-            System.out.println("Total price is EUR " + computer.getPrice());
-        }
-        else {
-            System.out.println("Your computer is not ready yet...");
-        }
+        System.out.println((computer.isComplete().booleanValue()) ? "Total price is EUR " + computer.getPrice() : "Your computer is not ready yet...");
     }
 }
