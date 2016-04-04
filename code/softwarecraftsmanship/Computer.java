@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Computer {
     
-    List<Part> parts = new ArrayList<>();
+    PartsWrapperFactory parts = PartsWrapperFactory.createPartsWrapperWithoutParts();
     
     public void addPart(Part part) {
         if (part == null) {
@@ -17,7 +17,8 @@ public class Computer {
     public DoubleWrapperFactory getPrice() {
         DoubleWrapperFactory price = DoubleWrapperFactory.createDoubleWrapperWithDouble(0.0);
 
-        for (Part part: parts) {
+        for (IntWrapperFactory index = IntWrapperFactory.createIntWrapperWithInt(0); index.smallerThan(this.parts.size()).booleanValue(); index = index.plus(IntWrapperFactory.createIntWrapperWithInt(1))) {
+            Part part = parts.partAtIndex(index);
             price = price.plus(part.getPrice());
         }
         
@@ -25,7 +26,7 @@ public class Computer {
     }
     
     public BooleanWrapperFactory isComplete() {
-        if (this.parts.size() < 4) {
+        if (this.parts.size().smallerThan(IntWrapperFactory.createIntWrapperWithInt(4)).booleanValue()) {
             return BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         }
         
@@ -34,7 +35,8 @@ public class Computer {
         BooleanWrapperFactory hasMemory = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         BooleanWrapperFactory hasMotherboard = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         
-        for (Part part: parts) {
+        for (IntWrapperFactory index = IntWrapperFactory.createIntWrapperWithInt(0); index.smallerThan(this.parts.size()).booleanValue(); index = index.plus(IntWrapperFactory.createIntWrapperWithInt(1))) {
+            Part part = parts.partAtIndex(index);
             hasCasing = (hasCasing.booleanValue()) ? hasCasing : part.isCasing();
             hasProcessor = (hasProcessor.booleanValue()) ? hasProcessor : part.isProcessor();
             hasMemory = (hasMemory.booleanValue()) ? hasMemory : part.isProcessor();

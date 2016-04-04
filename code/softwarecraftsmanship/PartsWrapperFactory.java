@@ -42,4 +42,8 @@ public class PartsWrapperFactory {
     public IntWrapperFactory size() {
         return IntWrapperFactory.createIntWrapperWithInt(this.parts.size());
     }
+    
+    public Part partAtIndex(IntWrapperFactory index) {
+        return this.parts.get(index.intValue());
+    }
 }

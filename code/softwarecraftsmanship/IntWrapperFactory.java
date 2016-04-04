@@ -23,4 +23,12 @@ public class IntWrapperFactory {
     public int intValue() {
         return this._int;
     }
+    
+    public BooleanWrapperFactory smallerThan(IntWrapperFactory iwf) {
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this._int < iwf._int);
+    }
+    
+    public IntWrapperFactory plus(IntWrapperFactory iwf) {
+        return IntWrapperFactory.createIntWrapperWithInt(this._int + iwf._int);
+    }
 }
