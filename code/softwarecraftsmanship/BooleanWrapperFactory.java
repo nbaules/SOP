@@ -12,12 +12,12 @@ package com.fontys.softwarecraftsmanship;
 public class BooleanWrapperFactory {
     private boolean _boolean;
     
-    private BooleanWrapperFactory() {
-        
+    private BooleanWrapperFactory(boolean _boolean) {
+        this._boolean = _boolean;
     }
     
-    public void createBooleanWrapperWithBoolean(boolean _boolean) {
-        this._boolean = _boolean;
+    static public BooleanWrapperFactory createBooleanWrapperWithBoolean(boolean _boolean) {
+        return new BooleanWrapperFactory(_boolean);
     }
     
     public boolean booleanValue() {
