@@ -54,7 +54,7 @@ public class Part {
         return type;
     }
     
-    public double getPrice() {
-        return price;
+    public DoubleWrapperFactory getPrice() {
+        return DoubleWrapperFactory.createDoubleWrapperWithDouble(price);
     }
 }

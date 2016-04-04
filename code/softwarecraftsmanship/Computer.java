@@ -6,23 +6,25 @@ public class Computer {
     
     List<Part> parts = new ArrayList<>();
     
-    public void addPart(Part p) {
-        parts.add(p);
+    public void addPart(Part part) {
+        if (part == null) {
+            return;
+        }
+        
+        parts.add(part);
     }
     
-    public double getPrice() {
-        double price = 0.0;
+    public DoubleWrapperFactory getPrice() {
+        DoubleWrapperFactory price = DoubleWrapperFactory.createDoubleWrapperWithDouble(0.0);
 
         for (Part part: parts) {
-            price = price + part.getPrice();
+            price = price.plus(part.getPrice());
         }
         
         return price;
     }
 
     public boolean hasCasing() {
-        return parts.map { $0.type }.contains("Casing");
-
         for (Part part: parts) {
 
         }
