@@ -50,11 +50,23 @@ public class Part {
         this.price = price;
     }
     
-    public StringWrapperFactory getType() {
-        return type;
-    }
-    
     public DoubleWrapperFactory getPrice() {
         return price;
+    }
+    
+    public BooleanWrapperFactory isCasing() {
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Casing")));
+    }
+    
+    public BooleanWrapperFactory isProcessor() {
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Processor")));
+    }
+    
+    public BooleanWrapperFactory isMemory() {
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Memory")));
+    }
+    
+    public BooleanWrapperFactory isMotherboard() {
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Motherboard")));
     }
 }

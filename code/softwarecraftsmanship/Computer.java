@@ -23,37 +23,22 @@ public class Computer {
         
         return price;
     }
-
-    public BooleanWrapperFactory hasCasing() {
-        for (Part part: parts) {
-
-        }
-
-        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
-    }
     
     public BooleanWrapperFactory isComplete() {
+        if (this.parts.size() < 4) {
+            return BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
+        }
+        
         BooleanWrapperFactory hasCasing = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         BooleanWrapperFactory hasProcessor = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         BooleanWrapperFactory hasMemory = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         BooleanWrapperFactory hasMotherboard = BooleanWrapperFactory.createBooleanWrapperWithBoolean(false);
         
         for (Part part: parts) {
-            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Casing"))) {
-                hasCasing = BooleanWrapperFactory.createBooleanWrapperWithBoolean(true);
-                continue;
-            }
-            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Processor"))) {
-                hasProcessor = BooleanWrapperFactory.createBooleanWrapperWithBoolean(true);
-                continue;
-            }
-            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Memory"))) {
-                hasMemory = BooleanWrapperFactory.createBooleanWrapperWithBoolean(true);
-                continue;
-            }
-            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Motherboard"))) {
-                hasMotherboard = BooleanWrapperFactory.createBooleanWrapperWithBoolean(true);
-            }
+            hasCasing = (hasCasing.booleanValue()) ? hasCasing : part.isCasing();
+            hasProcessor = (hasProcessor.booleanValue()) ? hasProcessor : part.isProcessor();
+            hasMemory = (hasMemory.booleanValue()) ? hasMemory : part.isProcessor();
+            hasMotherboard = (hasMotherboard.booleanValue()) ? hasMotherboard : part.isProcessor();
         }
         
         return BooleanWrapperFactory.createBooleanWrapperWithBoolean(hasCasing.booleanValue() && hasProcessor.booleanValue() && hasMemory.booleanValue() && hasMotherboard.booleanValue());
