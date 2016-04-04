@@ -6,10 +6,10 @@ public class Part {
     private final StringWrapperFactory title;
     private final DoubleWrapperFactory price;
     private StringWrapperFactory subtype = null;
-    private int size = -1;
+    private IntWrapperFactory size = IntWrapperFactory.createIntWrapperWithInt(-1);
     private DoubleWrapperFactory speed = DoubleWrapperFactory.createDoubleWrapperWithDouble(-1.0);
     
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, int size, DoubleWrapperFactory speed) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size, DoubleWrapperFactory speed) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -19,7 +19,7 @@ public class Part {
     }
     
     // Memory
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, int size) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size) {
         this.type = type;
         this.title = title;
         this.price = price;

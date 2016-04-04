@@ -12,12 +12,12 @@ package com.fontys.softwarecraftsmanship;
 public class IntWrapperFactory {
     private int _int;
     
-    private IntWrapperFactory() {
-        
+    private IntWrapperFactory(int _int) {
+        this._int = _int;
     }
     
-    public void createIntWrapperWithInt(int _int) {
-        this._int = _int;
+    static public IntWrapperFactory createIntWrapperWithInt(int _int) {
+        return new IntWrapperFactory(_int);
     }
     
     public int intValue() {
