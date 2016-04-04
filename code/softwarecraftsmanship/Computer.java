@@ -39,21 +39,20 @@ public class Computer {
         boolean hasMotherboard = false;
         
         for (Part part: parts) {
-            if (part.getType().equals("Casing")) {
+            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Casing"))) {
                 hasCasing = true;
                 continue;
             }
-            if (part.getType().equals("Processor")) {
+            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Processor"))) {
                 hasProcessor = true;
                 continue;
             }
-            if (part.getType().equals("Memory")) {
+            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Memory"))) {
                 hasMemory = true;
                 continue;
             }
-            if (part.getType().equals("Motherboard")) {
+            if (part.getType().equals(StringWrapperFactory.createStringWrapperWithString("Motherboard"))) {
                 hasMotherboard = true;
-                continue;
             }
         }
         

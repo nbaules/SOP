@@ -2,14 +2,14 @@ package com.fontys.softwarecraftsmanship;
 
 public class Part {
     
-    private final String type;
-    private final String title;
-    private final double price;
-    private String subtype = null;
+    private final StringWrapperFactory type;
+    private final StringWrapperFactory title;
+    private final DoubleWrapperFactory price;
+    private StringWrapperFactory subtype = null;
     private int size = -1;
-    private double speed = -1.0;
+    private DoubleWrapperFactory speed = DoubleWrapperFactory.createDoubleWrapperWithDouble(-1.0);
     
-    public Part(String type, String title, double price, String subtype, int size, double speed) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, int size, DoubleWrapperFactory speed) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -19,7 +19,7 @@ public class Part {
     }
     
     // Memory
-    public Part(String type, String title, double price, String subtype, int size) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, int size) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -28,7 +28,7 @@ public class Part {
     }
     
     // Casing
-    public Part(String type, String title, double price, String subtype) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -36,7 +36,7 @@ public class Part {
     }
     
     // Processor
-    public Part(String type, String title, double price, double speed) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, DoubleWrapperFactory speed) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -44,17 +44,17 @@ public class Part {
     }
     
     // Motherboard
-    public Part(String type, String title, double price) {
+    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price) {
         this.type = type;
         this.title = title;
         this.price = price;
     }
     
-    public String getType() {
+    public StringWrapperFactory getType() {
         return type;
     }
     
     public DoubleWrapperFactory getPrice() {
-        return DoubleWrapperFactory.createDoubleWrapperWithDouble(price);
+        return price;
     }
 }

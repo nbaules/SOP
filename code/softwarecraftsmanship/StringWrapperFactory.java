@@ -11,17 +11,27 @@ package com.fontys.softwarecraftsmanship;
  */
 public class StringWrapperFactory {
     
-    private String string;
+    private final String string;
     
-    private StringWrapperFactory() {
-        
+    private StringWrapperFactory(String string) {
+        this.string = string;
     }
     
-    public void createStringWrapperWithString(String string) {
-        this.string = string;
+    static public StringWrapperFactory createStringWrapperWithString(String string) {
+        return new StringWrapperFactory(string);
     }
     
     public String stringValue() {
         return this.string;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        StringWrapperFactory compareTo = (StringWrapperFactory) obj;
+        return (this.string == null ? compareTo.string == null : this.string.equals(compareTo.string));
     }
 }

@@ -6,10 +6,26 @@ public class Main {
         
         Computer computer = new Computer();
         
-        computer.addPart(new Part("Casing", "Cooler Master Centurion 6", 49.50, "Midi tower"));
-        computer.addPart(new Part("Processor", "Intel i7-4790", 295.0, 3.6));
-        computer.addPart(new Part("Memory", "G.SKILL Ripjaws X Series", 99.99, "DDR3", 16));
-        computer.addPart(new Part("Motherboard", "MSI H97 PC MATE - Socket 1150 - ATX", 89.0));
+        computer.addPart(new Part(
+                StringWrapperFactory.createStringWrapperWithString("Casing"), 
+                StringWrapperFactory.createStringWrapperWithString("Cooler Master Centurion 6"), 
+                DoubleWrapperFactory.createDoubleWrapperWithDouble(49.50), 
+                StringWrapperFactory.createStringWrapperWithString("Midi tower")));
+        computer.addPart(new Part(
+                StringWrapperFactory.createStringWrapperWithString("Processor"), 
+                StringWrapperFactory.createStringWrapperWithString("Intel i7-4790"), 
+                DoubleWrapperFactory.createDoubleWrapperWithDouble(295.0), 
+                DoubleWrapperFactory.createDoubleWrapperWithDouble(3.6)));
+        computer.addPart(new Part(
+                StringWrapperFactory.createStringWrapperWithString("Memory"), 
+                StringWrapperFactory.createStringWrapperWithString("G.SKILL Ripjaws X Series"), 
+                DoubleWrapperFactory.createDoubleWrapperWithDouble(99.99), 
+                StringWrapperFactory.createStringWrapperWithString("DDR3"), 
+                16));
+        computer.addPart(new Part(
+                StringWrapperFactory.createStringWrapperWithString("Motherboard"), 
+                StringWrapperFactory.createStringWrapperWithString("MSI H97 PC MATE - Socket 1150 - ATX"), 
+                DoubleWrapperFactory.createDoubleWrapperWithDouble(89.0)));
         
         if (computer.isComplete()) {
             System.out.println("Total price is EUR " + computer.getPrice());

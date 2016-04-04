@@ -10,7 +10,7 @@ package com.fontys.softwarecraftsmanship;
  * @author bas
  */
 public class DoubleWrapperFactory {
-    private double _double;
+    private final double _double;
     
     private DoubleWrapperFactory(double _double) {
         this._double = _double;
@@ -26,5 +26,9 @@ public class DoubleWrapperFactory {
     
     public DoubleWrapperFactory plus(DoubleWrapperFactory dwf) {
         return DoubleWrapperFactory.createDoubleWrapperWithDouble(this._double + dwf._double);
+    }
+    
+    public StringWrapperFactory toStringWrapperFactory() {
+        return StringWrapperFactory.createStringWrapperWithString(Double.toString(this._double));
     }
 }
