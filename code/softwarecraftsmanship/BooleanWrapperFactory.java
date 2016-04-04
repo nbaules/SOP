@@ -10,7 +10,7 @@ package com.fontys.softwarecraftsmanship;
  * @author bas
  */
 public class BooleanWrapperFactory {
-    private boolean _boolean;
+    private final boolean _boolean;
     
     private BooleanWrapperFactory(boolean _boolean) {
         this._boolean = _boolean;
