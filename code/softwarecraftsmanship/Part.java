@@ -2,14 +2,14 @@ package com.fontys.softwarecraftsmanship;
 
 public class Part {
     
-    private final StringWrapperFactory type;
+    private final PartType type;
     private final StringWrapperFactory title;
     private final DoubleWrapperFactory price;
     private StringWrapperFactory subtype = null;
     private IntWrapperFactory size = IntWrapperFactory.createIntWrapperWithInt(-1);
     private DoubleWrapperFactory speed = DoubleWrapperFactory.createDoubleWrapperWithDouble(-1.0);
     
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size, DoubleWrapperFactory speed) {
+    public Part(PartType type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size, DoubleWrapperFactory speed) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -19,7 +19,7 @@ public class Part {
     }
     
     // Memory
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size) {
+    public Part(PartType type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype, IntWrapperFactory size) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -28,7 +28,7 @@ public class Part {
     }
     
     // Casing
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype) {
+    public Part(PartType type, StringWrapperFactory title, DoubleWrapperFactory price, StringWrapperFactory subtype) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -36,7 +36,7 @@ public class Part {
     }
     
     // Processor
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price, DoubleWrapperFactory speed) {
+    public Part(PartType type, StringWrapperFactory title, DoubleWrapperFactory price, DoubleWrapperFactory speed) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -44,7 +44,7 @@ public class Part {
     }
     
     // Motherboard
-    public Part(StringWrapperFactory type, StringWrapperFactory title, DoubleWrapperFactory price) {
+    public Part(PartType type, StringWrapperFactory title, DoubleWrapperFactory price) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -55,18 +55,18 @@ public class Part {
     }
     
     public BooleanWrapperFactory isCasing() {
-        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Casing")));
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(PartType.CASING));
     }
     
     public BooleanWrapperFactory isProcessor() {
-        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Processor")));
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(PartType.PROCESSOR));
     }
     
     public BooleanWrapperFactory isMemory() {
-        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Memory")));
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(PartType.MEMORY));
     }
     
     public BooleanWrapperFactory isMotherboard() {
-        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(StringWrapperFactory.createStringWrapperWithString("Motherboard")));
+        return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.type.equals(PartType.MOTHERBOARD));
     }
 }
