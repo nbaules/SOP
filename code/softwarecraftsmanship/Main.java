@@ -21,7 +21,7 @@ public class Main {
                 StringWrapperFactory.createStringWrapperWithString("G.SKILL Ripjaws X Series"), 
                 DoubleWrapperFactory.createDoubleWrapperWithDouble(99.99), 
                 StringWrapperFactory.createStringWrapperWithString("DDR3"), 
-                IntWrapperFactory.createIntWrapperWithInt(16)));
+                IntegerWrapperFactory.createIntWrapperWithInt(16)));
         computer.addPart(new Part(
                 PartType.MOTHERBOARD, 
                 StringWrapperFactory.createStringWrapperWithString("MSI H97 PC MATE - Socket 1150 - ATX"), 

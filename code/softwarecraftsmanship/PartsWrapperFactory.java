@@ -39,11 +39,11 @@ public class PartsWrapperFactory {
         return BooleanWrapperFactory.createBooleanWrapperWithBoolean(this.parts.add(part));
     }
     
-    public IntWrapperFactory size() {
-        return IntWrapperFactory.createIntWrapperWithInt(this.parts.size());
+    public IntegerWrapperFactory size() {
+        return IntegerWrapperFactory.createIntWrapperWithInt(this.parts.size());
     }
     
-    public Part partAtIndex(IntWrapperFactory index) {
+    public Part partAtIndex(IntegerWrapperFactory index) {
         return this.parts.get(index.intValue());
     }
 }
