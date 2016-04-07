@@ -41,19 +41,19 @@ Relatief onvoorspelbaar;
 
 Grafische weergave resultaten:
 Allocations:
-￼![image](alloc_1.png)
-![image](alloc_2.png)
-![image](alloc_3.png)
+￼![image](/images/alloc_1.png)
+![image](/images/alloc_2.png)
+![image](/images/alloc_3.png)
 
 Activity monitor:
-￼![image](am_1.png)
-![image](am_2.png)
-![image](am_3.png)
+￼![image](/images/am_1.png)
+![image](/images/am_2.png)
+![image](/images/am_3.png)
 
 Leaks:
-￼![image](leak_1.png)
-![image](leak_2.png)
-![image](leak_3.png)
+￼![image](/images/leak_1.png)
+![image](/images/leak_2.png)
+![image](/images/leak_3.png)
 
 ### Verschil baseline, periodieke en incidentele dynamische metingen:
 Ondanks dat die niet zo specifiek gemeten is, kun je in ieder geval zien dat er bepaalde spikes en verschillen in de grafieken te observeren zijn. Hieruit kun je in ieder geval concluderen dat het nuttig is om dynamische metingen te doen - statische metingen zijn niet altijd betrouwbaar of nuttig - en kunnen daardoor verkeerd geïnterpreteerd worden
