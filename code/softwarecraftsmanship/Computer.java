@@ -14,7 +14,7 @@ public class Computer {
         parts.add(part);
     }
     
-    public DoubleWrapperFactory getPrice() {
+    public DoubleWrapperFactory priceValue() {
         DoubleWrapperFactory price = DoubleWrapperFactory.createDoubleWrapperWithDouble(0.0);
 
         for (IntegerWrapperFactory index = IntegerWrapperFactory.createIntWrapperWithInt(0); index.smallerThan(this.parts.size()).booleanValue(); index = index.plus(IntegerWrapperFactory.createIntWrapperWithInt(1))) {
