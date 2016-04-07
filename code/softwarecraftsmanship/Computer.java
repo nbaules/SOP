@@ -39,8 +39,8 @@ public class Computer {
             Part part = parts.partAtIndex(index);
             hasCasing = (hasCasing.booleanValue()) ? hasCasing : part.isCasing();
             hasProcessor = (hasProcessor.booleanValue()) ? hasProcessor : part.isProcessor();
-            hasMemory = (hasMemory.booleanValue()) ? hasMemory : part.isProcessor();
-            hasMotherboard = (hasMotherboard.booleanValue()) ? hasMotherboard : part.isProcessor();
+            hasMemory = (hasMemory.booleanValue()) ? hasMemory : part.isMemory();
+            hasMotherboard = (hasMotherboard.booleanValue()) ? hasMotherboard : part.isMotherboard();
         }
         
         return BooleanWrapperFactory.createBooleanWrapperWithBoolean(hasCasing.booleanValue() && hasProcessor.booleanValue() && hasMemory.booleanValue() && hasMotherboard.booleanValue());

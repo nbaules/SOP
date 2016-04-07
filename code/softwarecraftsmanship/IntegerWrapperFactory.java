@@ -10,7 +10,7 @@ package com.fontys.softwarecraftsmanship;
  * @author bas
  */
 public class IntegerWrapperFactory {
-    private int _int;
+    private final int _int;
     
     private IntegerWrapperFactory(int _int) {
         this._int = _int;
