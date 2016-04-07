@@ -3,22 +3,30 @@
 ## A)
 ### Drie te meten eigenschappen:
 Allocations
+
 Activity monitor
+
 Leaks
 
 ### Toelichting relevantie:
 Kijken hoeveel objecten aangemaakt worden
+
 Kijken hoeveel RAM en overige resources gebruikt worden
+
 Kijken of er objecten ‘lekken’; oftewel niet gedeallocated kunnen worden
 
 ### Type meting:
 Gemiddelde over tijd gebruik
+
 Hoogtepunten per specifieke actie(s)
+
 Aantal leaks
 
 ### Verwachting:
 Normaal - er wordt in de applicatie rekening gehouden met het aantal objecten - en dit wordt goed gemanaged met ARC
+
 Hoger bij gebruik advertenties, lager wanneer deze uitstaan
+
 Normaal - dankzij ARC zouden er weinig tot geen leaks op moeten treden
 
 ### Opnemen van uitvoeren van dynamische metingen
@@ -31,12 +39,15 @@ Gemeten met Instruments, een tool om verschillende soorten metingen uit te voere
 ## B)
 ### Metingen (meermaals) uitvoeren (en vergelijken):
 Allocations:
+
 Spikes tijdens openen van een artikel, waarbij vele objecten worden ingeladen en getoond; dat is logisch. Verder lijken de metingen redelijk consistent
 
 Activity monitor:
+
 Zijn redelijk normaal, fluctueren weinig.
 
 Leaks:
+
 Relatief onvoorspelbaar; 
 
 Grafische weergave resultaten:
