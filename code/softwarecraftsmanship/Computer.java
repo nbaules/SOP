@@ -19,7 +19,7 @@ public class Computer {
 
         for (IntegerWrapperFactory index = IntegerWrapperFactory.createIntWrapperWithInt(0); index.smallerThan(this.parts.size()).booleanValue(); index = index.plus(IntegerWrapperFactory.createIntWrapperWithInt(1))) {
             Part part = parts.partAtIndex(index);
-            price = price.plus(part.getPrice());
+            price = price.plus(part.priceValue());
         }
         
         return price;

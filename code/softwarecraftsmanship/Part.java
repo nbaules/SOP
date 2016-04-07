@@ -34,7 +34,7 @@ public class Part {
         this.price = price;
     }
     
-    public DoubleWrapperFactory getPrice() {
+    public DoubleWrapperFactory priceValue() {
         return price;
     }
     
